@@ -17,6 +17,7 @@ export interface ISignupRequest {
   firstName?: string;
   lastName?: string;
   username?: string;
+  profilePicture?:string
 }
 
 /**

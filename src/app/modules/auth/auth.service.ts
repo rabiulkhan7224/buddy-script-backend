@@ -96,7 +96,8 @@ class AuthService {
       password: payload.password,
       firstName: payload.firstName,
       lastName: payload.lastName,
-      username: payload.username
+      username: payload.username,
+      profilePicture:payload.profilePicture
     });
 
     await newUser.save();

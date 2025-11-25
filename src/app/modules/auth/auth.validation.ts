@@ -27,7 +27,9 @@ const signupValidationSchema = z.object({
         "Username can only contain letters, numbers, and underscores."
       )
       .optional(),
+      profilePicture:z.string().optional(),
   }),
+  
 });
 const changePasswordValidationSchema = z.object({
   body: z.object({
