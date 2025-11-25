@@ -41,20 +41,32 @@ const getCorsOrigin = async (): Promise<string[]> => {
       // TODO: Replace with actual database fetch
       // const cors = await yourCorsOriginFromDB();
       // value = cors?.origin || [];
-      value = ['http://localhost:5173', 'http://localhost:5174'];
+      value = [
+        'http://localhost:5173',
+        'http://localhost:5174',
+        'http://localhost:3000',
+        'https://buddyscript-frontend.vercel.app'
+      ];
       create_cache_into_RAM('cors_origin', value);
     }
     
     return Array.isArray(value) ? value : [value as string];
   } catch (error) {
     console.error('Error fetching CORS origins:', error);
-    return ['http://localhost:5173', 'http://localhost:5174']; // Fallback origins
+    return [
+      'http://localhost:5173',
+      'http://localhost:5174',
+      'http://localhost:3000',
+      'https://buddyscript-frontend.vercel.app'
+    ]; // Fallback origins
   }
 };
 
 const getFallbackOrigins = (): string[] => [
   'http://localhost:5173',
-  'http://localhost:5174'
+  'http://localhost:5174',
+  'http://localhost:3000',
+  'https://buddyscript-frontend.vercel.app'
 ];
 
 // Middleware setup
