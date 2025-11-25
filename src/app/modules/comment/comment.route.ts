@@ -10,7 +10,8 @@ const router: Router = Router();
 router.get('/:commentId', CommentController.getComment);
 router.get('/:commentId/replies', CommentController.getCommentReplies);
 router.get('/:commentId/likes', CommentController.getCommentLikes);
-
+// Get all comments on a post (top-level only)
+router.get("/post/:postId",CommentController.getPostComments)
 // Protected routes (require authentication)
 router.post(
   '/post/:postId',
