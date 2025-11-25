@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { CommentController } from './comment.controller';
 import validateRequest from '../../middlewares/validateRequest';
-import { CommentValidation } from './comment.validation';
 import auth from '../../middlewares/auth';
+import { CommentController } from './comment.controller';
+import { CommentValidation } from './comment.validation';
 
 const router: Router = Router();
 

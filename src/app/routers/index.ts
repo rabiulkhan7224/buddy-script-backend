@@ -1,6 +1,7 @@
 import express, { Router } from 'express';
 import { AuthModuleRoutes } from '../modules/auth/auth.route';
 import { PostModuleRoutes } from '../modules/post/post.route';
+import { CommentModuleRoutes } from '../modules/comment/comment.route';
 
 /**
  * Main router configuration
@@ -22,6 +23,10 @@ const moduleRoutes = [
   {
     path: '/posts',
     route: PostModuleRoutes
+  },
+   {
+    path: '/comments',
+    route: CommentModuleRoutes
   }
 ];
 
